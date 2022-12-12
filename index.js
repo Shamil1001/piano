@@ -1,21 +1,13 @@
 function Buttons() {
-  const white = document.querySelector(".wh");
-  const black = document.querySelector(".bl");
+  const pianoKeys = document.querySelectorAll(".key");
 
-  for (let i = 0; i < 14; i++) {
-    var whitebtns = `<button id=${i}>${i}</button>`;
-    let item1 = document.createElement("div");
-    item1.classList.add("white");
-    item1.innerHTML = whitebtns;
-    white.appendChild(item1);
-  }
-  for (let i = 0; i < 10; i++) {
-    var blackbtns = `<button>${i}</button>`;
-    let item2 = document.createElement("div");
-    item2.classList.add("black");
-    item2.innerHTML = blackbtns;
-    black.appendChild(item2);
-  }
+  pianoKeys.forEach((pianoKey, i) => {
+    const num = i < 9 ? "0" + i : i + 1;
+    const url = "./24pianoKeys/key" + num + ".mp3";
+    pianoKey.addEventListener("click", () => {
+      new Audio(url).play();
+    });
+  });
 }
 
 Buttons();
