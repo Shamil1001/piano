@@ -30,12 +30,19 @@ body {
   display: flex;
 }
 
+.white-key:hover {
+  background-color: rgb(211, 203, 203);
+}
+
 .white-key {
   width: 70px;
   height: 280px;
   border-radius: 0 0 5px 5px;
-  /* border: solid rgb(67, 66, 66) 2px; */
   box-sizing: border-box;
+}
+
+.black-key:hover {
+  background-color: rgb(42, 41, 41);
 }
 
 .black-key {
